@@ -23,6 +23,17 @@ public class TicTacToeGame {
         System.out.println("Your choice is " + Userchoice + "\nComputers choice is " + ComputerChoice);
 
     }
+    public static void Displayboard()
+    {
+        System.out.println("Board is here!!\n");
+        System.out.println("_____________");
+        System.out.println("| "+board[1]+" | "+board[2]+" | "+board[3]+" | ");
+        System.out.println("_____________");
+        System.out.println("| "+board[4]+" | "+board[5]+" | "+board[6]+" | ");
+        System.out.println("_____________");
+        System.out.println("| "+board[7]+" | "+board[8]+" | "+board[9]+" | ");
+        System.out.println("_____________");
+    }
 
     public static void fillingEmpty() {
         for (int i = 0; i < 10; i++)
@@ -31,7 +42,9 @@ public class TicTacToeGame {
     }
 
     public static void main(String[] args) {
+        fillingEmpty();
         choiceFilling();
+        Displayboard();
     }
 
 
