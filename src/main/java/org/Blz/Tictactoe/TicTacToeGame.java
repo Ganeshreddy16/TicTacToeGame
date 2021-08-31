@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class TicTacToeGame {
     public static char[] board = new char[10];
     public static char Userchoice, ComputerChoice;
-
+    public static int position;
 
     public static void choiceFilling() {
         Scanner input = new Scanner(System.in);
@@ -41,10 +41,24 @@ public class TicTacToeGame {
 
     }
 
+    public static void selectPosition(){
+        System.out.println("Enter Positon from 1-9");
+        Scanner input = new Scanner(System.in);
+        position=input.nextInt();
+        if(position==1||position==2||position==3||position==4||position==5||position==6||position==7||position==8||position==9)
+        {
+            System.out.println("You selected " + position + " Position");
+            board[position] = Userchoice;
+            Displayboard();
+        }
+        else
+            System.out.println("Enter Correct Position");
+    }
     public static void main(String[] args) {
         fillingEmpty();
         choiceFilling();
         Displayboard();
+        selectPosition();
     }
 
 
